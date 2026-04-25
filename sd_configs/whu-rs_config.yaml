@@ -5,8 +5,8 @@ cl:
   cl_num_tasks: 4
   cl_num_classes: 19
   classes_first_task: 4
-  cl_output_dir: /data3/zbh/CL-SD/output1/sd3_without_feat/whu-rs_output
-  cl_generated_dir: /data3/zbh/CL-SD/output1/sd3_without_feat/whu-rs_generated
+  cl_output_dir: whu-rs_output
+  cl_generated_dir: whu-rs_generated
   classifier_main_epochs: 50
   classifier_batch_size: 4
   n_samples_per_class: 300
