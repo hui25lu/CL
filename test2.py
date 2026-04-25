@@ -351,7 +351,7 @@ if __name__ == "__main__":
     device = torch.device("cuda:7" if torch.cuda.is_available() else "cpu")
     name = "whu-rs"  # 数据集名称
     model_name = "alexnet"  # 模型名称
-    model_paths = f"/data3/zbh/CL-SD/output1/sd3_without_feat_crfm/{name}_output"  # 模型存储路径
+    model_paths = f"{name}_output"  # 模型存储路径
 
     taw_results_table, tag_results_table = test_all_tasks_on_all_datasets(name, model_name, model_paths, device)
     print_results_dict(taw_results_table)
