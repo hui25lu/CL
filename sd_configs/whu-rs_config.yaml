@@ -1,0 +1,31 @@
+cl:
+  name: whu-rs
+  model_name: alexnet
+  freeze_partial: true
+  cl_num_tasks: 4
+  cl_num_classes: 19
+  classes_first_task: 4
+  cl_output_dir: /data3/zbh/CL-SD/output1/sd3_without_feat/whu-rs_output
+  cl_generated_dir: /data3/zbh/CL-SD/output1/sd3_without_feat/whu-rs_generated
+  classifier_main_epochs: 50
+  classifier_batch_size: 4
+  n_samples_per_class: 300
+  top_k: 150
+  filter_mode: twotail
+
+sd:
+  mixed_precision: fp16
+  pretrained_model_name_or_path: CompVis/stable-diffusion-v1-4
+  train_data_dir: null
+  caption_column: text
+  resolution: 256
+  random_flip: true
+  train_batch_size: 4
+  num_train_epochs: 50
+  checkpointing_steps: 1000
+  learning_rate: 0.0001
+  lr_scheduler: constant
+  lr_warmup_steps: 0
+  rank: 8
+  seed: 30
+  output_dir: null
